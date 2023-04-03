@@ -32,14 +32,14 @@ const vm = new Vue({
 
   methods: {
     fetchProdutos() {
-      fetch("./api/produtos.json")
+      fetch("./techno/api/produtos.json")
         .then((r) => r.json())
         .then((r) => {
           this.produtos = r;
         });
     },
     fetchProduto(id) {
-      fetch(`./api/produtos/${id}/dados.json`)
+      fetch(`./techno/api/produtos/${id}/dados.json`)
         .then((r) => r.json())
         .then((r) => {
           this.produto = r;
